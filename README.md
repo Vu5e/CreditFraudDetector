@@ -18,17 +18,17 @@ Predictive models will be tested in this study for their accuracy in distinguish
 
 In the beginning, our dataset was extremely skewed. There isn't much fraud going on here. Our algorithms will undoubtedly overfit if we utilise this dataframe as the basis for our prediction models and analyses because it "assumes" that most transactions are not fraudulent. Instead of assuming, we need a system that can recognise patterns that indicate fraud!
 
-![Figure 2]()
+![Figure 2](https://github.com/Vu5e/CreditFraudDetector/blob/main/Images/Image%202.png)
 
 We can get a sense of how skewed these characteristics are by looking at the distributions, and we can also see how the other features are distributed.
 
-![Figure 3]()
+![Figure 3](https://github.com/Vu5e/CreditFraudDetector/blob/main/Images/Image%203.png)
 
 ### Splitting the Data
 
 Before proceeding with the Random UnderSampling technique we have to separate the orginal dataframe. Why? for testing purposes, remember although we are splitting the data when implementing Random UnderSampling or OverSampling techniques, we want to test our models on the original testing set not on the testing set created by either of these techniques. The main goal is to fit the model either with the dataframes that were undersample and oversample (in order for our models to detect the patterns), and test it on the original testing set.
 
-![Figure 4]()
+![Figure 4](https://github.com/Vu5e/CreditFraudDetector/blob/main/Images/Image%204.png)
 
 ### Random Undersampling
 In this phase of the project we will implement "Random Under Sampling" which basically consists of removing data in order to have a more balanced dataset and thus avoiding our models to overfitting.
@@ -40,12 +40,12 @@ Steps:
 
 Note: Our categorization models may not be as accurate as we'd like as a result of "Random Under-Sampling," because of the substantial data loss that it causes (bringing 492 non-fraud transaction from 284,315 non-fraud transaction)
 
-![Figure 5]()
+![Figure 5](https://github.com/Vu5e/CreditFraudDetector/blob/main/Images/Image%205.png)
 
 ### Equally Distributing and Correlating
 
 Now that we have our dataframe correctly balanced, we can go further with our analysis and data preprocessing.
-![Figure 6]()
+![Figure 6](https://github.com/Vu5e/CreditFraudDetector/blob/main/Images/Image%206.png)
 
 ### Correlation Matrices
 Correlation matrices are the essence of understanding our data. We want to know if there are features that influence heavily in whether a specific transaction is a fraud. However, it is important that we use the correct dataframe (subsample) in order for us to see which features have a high positive or negative correlation with regards to fraud transactions.
@@ -55,13 +55,13 @@ Correlation matrices are the essence of understanding our data. We want to know 
 - Positive Correlations: V2, V4, V11, and V19 are positively correlated. Notice how the higher these values are, the more likely the end result will be a fraud transaction.
 - BoxPlots: We will use boxplots to have a better understanding of the distribution of these features in fradulent and non fradulent transactions.
 
-![Figure 7]()
+![Figure 7](https://github.com/Vu5e/CreditFraudDetector/blob/main/Images/Image%207.png)
 
-![Figure 8]()
+![Figure 8](https://github.com/Vu5e/CreditFraudDetector/blob/main/Images/Image%208.png)
 
-![Figure 9]()
+![Figure 9](https://github.com/Vu5e/CreditFraudDetector/blob/main/Images/Image%209.png)
 
-![Figure 10]()
+![Figure 10](https://github.com/Vu5e/CreditFraudDetector/blob/main/Images/Image%2010.png)
 
 ### Outlier Detection
 
@@ -86,9 +86,9 @@ Tradeoff: For our purposes, we'd rather focus on "extreme" rather than "outliers
 
 Note: Using outlier reduction, we've increased our accuracy by almost 3%! The accuracy of our models can be distorted by outliers, but we must be careful not to lose too much information or risk underfitting.
 
-![Figure 11]()
+![Figure 11](https://github.com/Vu5e/CreditFraudDetector/blob/main/Images/Image%2011.png)
 
-![Figure 12]()
+![Figure 12](https://github.com/Vu5e/CreditFraudDetector/blob/main/Images/Image%2012.png)
 
 ### Dimensionality Reduction and Clustering:
 
@@ -104,9 +104,9 @@ Summary:
 - Although the subsample is pretty small, the t-SNE algorithm is able to detect clusters pretty accurately in every scenario (I shuffle the dataset before running t-SNE)
 - This gives us an indication that further predictive models will perform pretty well in separating fraud cases from non-fraud cases.
 
-![Figure 13]()
+![Figure 13](https://github.com/Vu5e/CreditFraudDetector/blob/main/Images/Image%2013.png)
 
-![Figure 14]()
+![Figure 14](https://github.com/Vu5e/CreditFraudDetector/blob/main/Images/Image%2014.png)
 
 ### Classifiers (UnderSampling):
 
@@ -122,17 +122,17 @@ Learning Curves:
 - If the score is low in both training and cross-validation sets this is an indication that our model is underfitting (high bias)
 - Logistic Regression Classifier shows the best score in both training and cross-validating sets.
 
-![Figure 15]()
+![Figure 15](https://github.com/Vu5e/CreditFraudDetector/blob/main/Images/Image%2015.png)
 
-![Figure 16]()
+![Figure 16](https://github.com/Vu5e/CreditFraudDetector/blob/main/Images/Image%2016.png)
 
-![Figure 17]()
+![Figure 17](https://github.com/Vu5e/CreditFraudDetector/blob/main/Images/Image%2017.png)
 
-![Figure 18]()
+![Figure 18](https://github.com/Vu5e/CreditFraudDetector/blob/main/Images/Image%2018.png)
 
-![Figure 19]()
+![Figure 19](https://github.com/Vu5e/CreditFraudDetector/blob/main/Images/Image%2019.png)
 
-![Figure 20]()
+![Figure 20](https://github.com/Vu5e/CreditFraudDetector/blob/main/Images/Image%2020.png)
 
 Terms:
 - True Positives: Correctly Classified Fraud Transactions
@@ -147,11 +147,13 @@ Terms:
 Summary:
 - Precision starts to descend between 0.90 and 0.92 nevertheless, our precision score is still pretty high and still we have a descent recall score.
 
-![Figure 21]()
+![Figure 21](https://github.com/Vu5e/CreditFraudDetector/blob/main/Images/Image%2021.png)
 
-![Figure 22]()
+![Figure 22](https://github.com/Vu5e/CreditFraudDetector/blob/main/Images/Image%2022.png)
 
-![Figure 23]()
+![Figure 23](https://github.com/Vu5e/CreditFraudDetector/blob/main/Images/Image%2023.png)
+
+![Figure 24](https://github.com/Vu5e/CreditFraudDetector/blob/main/Images/Image%2024.png)
 
 SMOTE Technique
 Understanding SMOTE:
@@ -161,10 +163,18 @@ Understanding SMOTE:
 - Final Effect: More information is retained since we didn't have to delete any rows unlike in random undersampling.
 - Accuracy || Time Tradeoff: Although it is likely that SMOTE will be more accurate than random under-sampling, it will take more time to train since no rows are eliminated as previously stated.
 
-Overfitting during Cross Validation:¶
+Overfitting during Cross Validation:
 In our undersample analysis I want to show you a common mistake I made that I want to share with all of you. It is simple, if you want to undersample or oversample your data you should not do it before cross validating. Why because you will be directly influencing the validation set before implementing cross-validation causing a "data leakage" problem. In the following section you will see amazing precision and recall scores but in reality our data is overfitting!
 
 As mentioned previously, if we get the minority class ("Fraud) in our case, and create the synthetic points before cross validating we have a certain influence on the "validation set" of the cross validation process. Remember how cross validation works, let's assume we are splitting the data into 5 batches, 4/5 of the dataset will be the training set while 1/5 will be the validation set. The test set should not be touched! For that reason, we have to do the creation of synthetic datapoints "during" cross-validation and not before, just like below:
+
+![Figure 25](https://github.com/Vu5e/CreditFraudDetector/blob/main/Images/Image%2025.png)
+
+![Figure 26](https://github.com/Vu5e/CreditFraudDetector/blob/main/Images/Image%2026.png)
+
+![Figure 27](https://github.com/Vu5e/CreditFraudDetector/blob/main/Images/Image%2027.png)
+
+![Figure 28](https://github.com/Vu5e/CreditFraudDetector/blob/main/Images/Image%2028.png)
 
 ### Test Data with Logistic Regression:
 
@@ -182,6 +192,12 @@ True Positives (Bottom-Right Square): This is the number of correctly classifica
 Summary:
 - Random UnderSampling: We will evaluate the final performance of the classification models in the random undersampling subset. Keep in mind that this is not the data from the original dataframe.
 - Classification Models: The models that performed the best were logistic regression and support vector classifier (SVM)
+
+![Figure 29](https://github.com/Vu5e/CreditFraudDetector/blob/main/Images/Image%2029.png)
+
+![Figure 30](https://github.com/Vu5e/CreditFraudDetector/blob/main/Images/Image%2030.png)
+
+![Figure 31](https://github.com/Vu5e/CreditFraudDetector/blob/main/Images/Image%2031.png)
 
 Conclusion:
 We were able to correct our label imbalance by using SMOTE on our unbalanced dataset (more no fraud than fraud transactions). Many non-fraud transactions are mistakenly classified as fraud in our undersample data because our algorithm is unable to identify them appropriately. If customers who regularly made purchases had their cards suspended because our model determined that the transaction was fraudulent, the financial institution would be at a severe disadvantage. Customer complaints and customer dissatisfaction are expected to rise. After removing outliers from our oversample dataset, we will evaluate if our test set accuracy increases.
